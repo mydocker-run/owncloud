@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  owncloud:
+    image: owncloud
+    container_name: owncloud
+    restart: always
+    network_mode: bridge
+    ports:
+      - 8081:80
+    volumes:
+      - /srv/data/owncloud:/var/www/html
